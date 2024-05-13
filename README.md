@@ -9,12 +9,6 @@ This project showcases a Minimal API developed using ASP.NET. It provides simple
 - **Environment Variables**: Utilizes environment variables to configure sensitive information like connection strings.
 - **Efficient and Lightweight**: Built with ASP.NET Minimal API, ensuring minimal overhead and maximum performance.
 
-## Getting Started
-
-1. **Clone the Repository**: Clone this repository to your local machine.
-2. **Configure Environment Variables**: Set up environment variables for the database connection string and authentication credentials.
-3. **Build and Run**: Build and run the project using your preferred IDE or command-line tools.
-
 ## Usage
 
 ### Endpoints
