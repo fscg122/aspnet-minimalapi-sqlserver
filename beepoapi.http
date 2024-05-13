@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:5009
+@API_Username = username
+@API_Password = password
+@$base64Auth = encodeBase64({{API_Username}} + ":" + {{API_Password}})
+
+### Retrieve all contacts
+GET {{baseUrl}}/api/contact
+Authorization: Basic {{$base64Auth}}
+
+### Retrieve a specific contact by ID
+GET {{baseUrl}}/api/contact/1
+Authorization: Basic {{$base64Auth}}
+
+### Create a new contact
+POST {{baseUrl}}/api/contact
+Content-Type: application/json
+Authorization: Basic {{$base64Auth}}
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "123-456-7890"
+}
+
+### Update an existing contact
+PUT {{baseUrl}}/api/contact/4
+Content-Type: application/json
+Authorization: Basic {{$base64Auth}}
+
+{
+    "firstName": "Updated John",
+    "lastName": "Updated Doe",
+    "email": "updated.john.doe@example.com",
+    "phoneNumber": "987-654-3210"
+}
+
+### Delete a contact
+DELETE {{baseUrl}}/api/contact/4
+Authorization: Basic {{$base64Auth}}
